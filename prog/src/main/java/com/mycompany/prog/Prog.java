@@ -4,6 +4,8 @@
 
 package com.mycompany.prog;
 
+import java.util.Scanner;
+
 /**
  *
  * @author letha
@@ -14,5 +16,12 @@ public class Prog {
         String userName;
         int phoneNum;
         String passWord;
+        Scanner inputs = new Scanner(System.in);
+        System.out.print("enter your UserName");
+        userName = inputs.nextLine();
+        System.out.print("Enter your phone number");
+        phoneNum = inputs.nextInt();
+        System.out.print("Enter your Password");
+        passWord = inputs.nextLine();
     }
 }
