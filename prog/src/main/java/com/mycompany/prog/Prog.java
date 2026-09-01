@@ -13,9 +13,11 @@ import java.util.Scanner;
 public class Prog {
 
     public static void main(String[] args) {
+        //Declarations
         String userName;
         int phoneNum;
         String passWord;
+        //Inputs
         Scanner inputs = new Scanner(System.in);
         System.out.print("enter your UserName");
         userName = inputs.nextLine();
