@@ -40,7 +40,7 @@ public class Projectpoe {
       System.out.println("username successfully captured.");
       //loop until valid password
       System.out.print("Enter password: ");
-      pasword = inputs.nextLine();
+      password = inputs.nextLine();
       while (!login.checkPasswordComplexity(password)){
           System.out.println("Password is not correctly formatted, please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.");
           System.out.print("Enter password again:");
