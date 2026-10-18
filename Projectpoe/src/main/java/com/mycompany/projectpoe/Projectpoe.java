@@ -58,7 +58,7 @@ public class Projectpoe {
       System.out.println("Cell phine number successfully captured ");
       //finalising state submission and check message back 
       String registrationOutPut = login.registerUser( userName, password, cellnumber, firstName, lastName);
-      System.out.println("registration successfull" + registrationOutPut);
+      System.out.println("\n" + registrationOutPut);
       
       System.out.println("ACCOUNT LOGIN");
       
@@ -72,7 +72,7 @@ public class Projectpoe {
       boolean isConnected = login.loginUser(loginuserName, loginpassword );
       String finalStatusMessage = login.returnLoginStatus(isConnected);
       
-      System.out.println("login successfull"+ finalStatusMessage);
+      System.out.println("\n"+ finalStatusMessage);
       inputs.close();
       
       }
