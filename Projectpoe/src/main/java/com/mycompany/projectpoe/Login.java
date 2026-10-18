@@ -96,7 +96,7 @@ public class Login {
         // A greeting test
         public String returnLoginStatus(boolean loggedIn){
             if(loggedIn){
-                return"Welcome" + firstName + "," + lastName +" it is geat to see you again";
+                return"Welcome" + this.registeredfirstName + "," + this.registeredlastName+" it is geat to see you again";
             }else{
                 return "userName or password incorrect, please try again.";
             }
