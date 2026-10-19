@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author letha
  */
-public class projectpoe2 {
+public class Message {
    
     //Instance variables
     private String messageID;
@@ -27,12 +27,12 @@ public class projectpoe2 {
     private static int totalMessageCounter = 0 ;
 
     //default constructor that autogenerates IDs and counters
-    public projectpoe2(){
+    public Message(){
         this.messageID = generateRandom10DigitID();
         this.messageNumber = totalMessageCounter;
     }
      //  constructors with parameters
-    public projectpoe2 (String messageID, int messageNumber, String recipient, String messageContent ){
+    public Message (String messageID, int messageNumber, String recipient, String messageContent ){
         this.messageID = messageID;
         this.messageNumber = messageNumber;
         this.recipient = recipient;
