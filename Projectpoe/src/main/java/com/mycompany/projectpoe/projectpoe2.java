@@ -79,7 +79,7 @@ public class projectpoe2 {
             return "message hash invalid";
         }
         //first two numbers of message Id
-        String idPrefix = this.messageID.substring(0, math.min(2, this.messageID.length()));
+        String idPrefix = this.messageID.substring(0, Math.min(2, this.messageID.length()));
         
         //extract first and last words
         String [] words = this.messageContent.trim().split("\\s+");
