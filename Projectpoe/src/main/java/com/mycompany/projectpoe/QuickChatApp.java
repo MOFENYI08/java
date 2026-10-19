@@ -35,7 +35,7 @@ public class QuickChatApp {
                    
                    for (int i = 0; i < numMessages; i++) {
                        Message msg = new Message();
-                       System.out.println("\n--- "+ msg.getMessageIdCreationStatus() + "---");
+                       System.out.println("\n--- "+ msg.getMessageIDCreationStatus() + "---");
                        
                        while(true){
                            System.out.print("Enter recipient cell:");
@@ -47,7 +47,7 @@ public class QuickChatApp {
                        
                        while(true){
                            System.out.print("Enter short message (Max 250 chars) : ");
-                           msg.setMessageContent(input.nextLine());
+                           msg.setMessageCounter(input.nextLine());
                            String validation = msg.validateMessageLength();
                            System.out.println(validation);
                            if (validation.contains("ready")) break;
@@ -58,17 +58,18 @@ public class QuickChatApp {
                        int action = input.nextInt();
                        input.nextLine();
                        
-                       System.out.printIn(msg.SentMessage(action));
+                       System.out.println(msg.sentMessage(action));
+        
                        if (action == 3)msg.storeMessage();
                    }
                    break;
-                   case2:
+               case 2:
                    System.out.println("comming soon.");
                    break;
                case 3:
                    running = false;
                    Message summary = new Message();
-                   System.out.println("\nTotal accumulated message processed:" + summary.returnTotalMessages());
+                   System.out.println("\nTotal accumulated message processed:" + summary.returnTotalMessage());
                    break;
                default:
                    System.out.println("invalid selection");
