@@ -7,6 +7,7 @@ package com.mycompany.projectpoe;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -140,8 +141,33 @@ public class projectpoe2 {
     public String grtMessageHash(){return messageHash; }
 }
 
-//
-    
+// the main driver class
+public class QuickChatApp{
+    public static void main (String[] args){
+        Scanner input = new Scanner (System.in);
+        boolean running = true;
+        System.out.println("Welcome to quickChat");
+        
+        while(running){
+           System.out.println("\nPease choose an option from menu:");
+           System.out.println("1) Send message");
+           System.out.println("2) Show recently sent messages");
+           System.out.println("3) Quit");
+           System.out.print("Enter code: ");
+           
+           int menuChoice = input.nextInt();
+           input.nextLine();
+           
+           switch(menuChoice){
+               case 1:
+                   System.out.print("How many messages do you wish to enter?");
+                   int numMessage = input.nextInt();
+                   input.nextLine();
+                   
+                   for (int i = 0; i < numMessages; i) {
+                       
+                   }
+           }
     
         }
     }
