@@ -81,11 +81,11 @@ public class Login {
                 return "Cell phone number incorrectly formatted or does not contain international code.";
             }
             //save registration parameters
-            this.registeredUserName = "userName";
-            this.registeredpassword = "password";
-            this.registeredcellnumber= "cellnumber";
-            this.registeredfirstName = "firstName";
-            this.registeredlastName = "lastName";
+            this.registeredUserName = userName;
+            this.registeredpassword = password;
+            this.registeredcellnumber= cellnumber;
+            this.registeredfirstName = firstName;
+            this.registeredlastName = lastName;
             return "password successfully captured";
         }
         //confirms authentication
