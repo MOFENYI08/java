@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 package testclasses;
+ 
+import com.mycompany.projectpoe.Message;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,13 +24,13 @@ public class MessageTest {
     public void testMessageLengthValidation() {
         // Success scenario
         Message validMsg = new Message();
-        validMsg.setMessageContent("Hello world, this is a short test message.");
+        validMsg.setMessageCounter("Hello world, this is a short test message.");
         assertEquals("Message ready to send.", validMsg.validateMessageLength());
 
         // Failure scenario (Simulating text longer than 250 characters)
         Message longMsg = new Message();
         String overflowText = "A".repeat(255); // 255 characters long
-        longMsg.setMessageContent(overflowText);
+        longMsg.setMessageCounter(overflowText);
         assertEquals("Message exceeds 250 characters by 5; please reduce the size.", longMsg.validateMessageLength());
     }
 
@@ -66,7 +68,7 @@ public class MessageTest {
         
         // Verify output matches the status message syntax requested in image 6
         String expectedPrefix = "Message ID generated: ";
-        assertTrue(msg.getMessageIdCreationStatus().startsWith(expectedPrefix));
+        assertTrue(msg.getMessageIDCreationStatus().startsWith(expectedPrefix));
     }
 
     //  Action routing conditions matching Image 6 statements
@@ -74,9 +76,9 @@ public class MessageTest {
     public void testSentMessageChoices() {
         Message testMsg = new Message();
         
-        assertEquals("Message successfully sent.", testMsg.SentMessage(1));
-        assertEquals("Press 0 to delete the message.", testMsg.SentMessage(2));
-        assertEquals("Message successfully stored.", testMsg.SentMessage(3));
+        assertEquals("Message successfully sent.", testMsg.sentMessage(1));
+        assertEquals("Press 0 to delete the message.", testMsg.sentMessage(2));
+        assertEquals("Message successfully stored.", testMsg.sentMessage(3));
     
 
     }
