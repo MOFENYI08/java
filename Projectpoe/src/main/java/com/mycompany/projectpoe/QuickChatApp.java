@@ -74,5 +74,6 @@ public class QuickChatApp {
            }
         }
         input.close();
+    }
     
 }
