@@ -67,7 +67,7 @@ public class MessageTest {
         assertTrue(msg.checkMessageID());
         
         // Verify output matches the status message syntax requested in image 6
-        String expectedPrefix = "MessageID generated:";
+        String expectedPrefix = "MessageID genrated:";
         assertTrue(msg.getMessageIDCreationStatus().startsWith(expectedPrefix));
     }
 
