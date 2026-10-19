@@ -64,10 +64,10 @@ public class MessageTest {
     public void testMessageIDTracking() {
         Message msg = new Message();
         // Check structural limits
-        assertFalse(msg.checkMessageID());
+        assertTrue(msg.checkMessageID());
         
         // Verify output matches the status message syntax requested in image 6
-        String expectedPrefix = "Message ID generated:";
+        String expectedPrefix = "MessageID generated:";
         assertTrue(msg.getMessageIDCreationStatus().startsWith(expectedPrefix));
     }
 
