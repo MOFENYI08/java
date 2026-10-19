@@ -115,6 +115,18 @@ public class projectpoe2 {
                     .append ("message Hash:").append(msg.getMessageHash()).append("\n")
                     .append ("recipient:").append(msg.getRecipient()).append("\n")
                     .append ("message :").append(msg.getMessageContent()).append("\n")
+                    .append("---------\n");
+        }
+        return sb.toString();
+    }
+    
+    // return total message 
+    public int returnTotalMessage(){
+        return totalMessageCounter;
+    }
+    // store message 
+    public void storeMessage(){
+        System.out.println("{\"messageId\" : \"" + this.messageID + "\", \"Hash\" : \ "" + this.messageHash + "\"} successfully serialised to storage JSON.");
         }
     }
     
