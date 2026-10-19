@@ -83,7 +83,7 @@ public class projectpoe2 {
         
         //extract first and last words
         String [] words = this.messageContent.trim().split("\\s+");
-        String firstWords = words [0];
+        String firstWord = words [0];
         String lastWord = words[words.length - 1];
         
         // Assemble and capitalize
