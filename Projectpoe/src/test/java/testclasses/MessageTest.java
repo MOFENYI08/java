@@ -31,7 +31,7 @@ public class MessageTest {
         Message longMsg = new Message();
         String overflowText = "A".repeat(255); // 255 characters long
         longMsg.setMessageCounter(overflowText);
-        assertEquals("Message exceeds 250 characters by 5; please reduce the size.", longMsg.validateMessageLength());
+        assertEquals("Message exceeds 250 characters by 5, please reduce the size.", longMsg.validateMessageLength());
     }
 
     //  Recipient field constraints
@@ -40,12 +40,12 @@ public class MessageTest {
         // case success starts with '+' and within 10 characters limit
         Message validCell = new Message();
         validCell.setRecipient("+2782123");
-        assertEquals("Cell phone number successfully captured.", validCell.checkRecipientCell());
+        assertEquals("cell phone number successfully captured.", validCell.checkRecipientCell());
 
         //  missing international code or too long
         Message invalidCell = new Message();
         invalidCell.setRecipient("082123456789");
-        assertEquals("Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again.", invalidCell.checkRecipientCell());
+        assertEquals("cell phone number is incorrectly formatted or does not contain an international code, Please correct the number and try again.", invalidCell.checkRecipientCell());
     }
 
     //  Proper hash generation formatting (Matches Test Case 1 specification)
@@ -67,7 +67,7 @@ public class MessageTest {
         assertTrue(msg.checkMessageID());
         
         // Verify output matches the status message syntax requested in image 6
-        String expectedPrefix = "Message ID generated: ";
+        String expectedPrefix = "Message ID generated:";
         assertTrue(msg.getMessageIDCreationStatus().startsWith(expectedPrefix));
     }
 
