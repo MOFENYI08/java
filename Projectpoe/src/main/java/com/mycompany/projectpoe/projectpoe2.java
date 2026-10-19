@@ -13,7 +13,7 @@ import java.util.Scanner;
  *
  * @author letha
  */
-public class Message {
+ class Message {
    
     //Instance variables
     private String messageID;
