@@ -180,11 +180,12 @@ public class QuickChatApp{
                            System.out.print("Enter short message (Max 250 chars) : ");
                            msg.setMessageContent(input.nextLine());
                            String validation = msg.validateMessageLength();
-                           System.out.printIn(validation);
+                           System.out.println(validation);
                            if (validation.contains("ready")) break;
                        }
                        msg.createMessageHash();
-                       System.out.printIn("\nChoose action:\n1) send\n2) Disregard\n3) Store");
+                       System.out.println("\nChoose action:\n1) send\n2) Disregard\n3) Store");
+                     
                        int action = input.nextInt();
                        input.nextLine();
                        
@@ -193,7 +194,7 @@ public class QuickChatApp{
                    }
                    break;
                    case2:
-                   System.out.printIn("Comming soon.");
+                   System.out.println("comming soon.");
                    break;
                case 3:
                    running = false;
@@ -201,19 +202,13 @@ public class QuickChatApp{
                    System.out.println("\nTotal accumulated message processed:" + summary.returnTotalMessages());
                    break;
                default:
-                   System.out.println("Invalid selection.");
+                   System.out.println("invalid selection");
            }
         }
         input.close();
-        
-                           
-                           
-                       }
-                   }
-           }
-    
-        }
     }
-    
-    
 }
+                           
+                           
+                       
+           
