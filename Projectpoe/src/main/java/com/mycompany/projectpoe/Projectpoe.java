@@ -82,6 +82,7 @@ public class Projectpoe {
           System.out.println("Application closing due to failed authentication.");
       
       inputs.close();
+      }
       
       }
       
