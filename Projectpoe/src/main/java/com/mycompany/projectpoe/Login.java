@@ -20,7 +20,7 @@ public class Login {
        this.registeredUserName = "userName";
        this.registeredpassword = "password";
        this.registeredcellnumber = "cellnumber";
-       this.registeredfirstName = "lastName";
+       this.registeredfirstName = "firstName";
        this.registeredlastName = "lastName";
     }
 
@@ -72,13 +72,13 @@ public class Login {
         //process registration and returns system notification
         public String registerUser(String userName, String password, String cellnumber, String firstName, String lastName){
             if (!checkUserName(userName)){
-                return "userName is not correctly formatted, please ensure that your username contains underscore and is no more than five characters i length";
+                return "userName is not correctly formatted, please ensure that your username contains underscore and is no more than five characters in length";
             }
             if (!checkPasswordComplexity(password)){
-                return "Password is not correctly formatted,please ensure that the password contains at least eight characters, a capital letter, a number and a special character.";
+                return "Password is not correctly formatted, please ensure that the password contains at least eight characters, a capital letter, a number and a special character.";
             }
             if (!checkCellPhoneNumber(cellnumber)){
-                return "Cell phone number incorrectly formatted or does not contain international code.";
+                return "Cell phone number incorrectly formatted or does not contain international code, please correct the number and try again.";
             }
             //save registration parameters
             this.registeredUserName = userName;
@@ -96,7 +96,7 @@ public class Login {
         // A greeting test
         public String returnLoginStatus(boolean loggedIn){
             if(loggedIn){
-                return"Welcome" + this.registeredfirstName + "," + this.registeredlastName+" it is geat to see you again";
+                return"Welcome" + this.registeredfirstName + "," + this.registeredlastName+" it is great to see you again";
             }else{
                 return "userName or password incorrect, please try again.";
             }
