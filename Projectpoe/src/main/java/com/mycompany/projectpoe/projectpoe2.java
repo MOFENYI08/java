@@ -161,11 +161,11 @@ public class QuickChatApp{
            switch(menuChoice){
                case 1:
                    System.out.print("How many messages do you wish to enter?");
-                   int numMessage = input.nextInt();
+                   int numMessages = input.nextInt();
                    input.nextLine();
                    
-                   for (int i = 0; i < numMessages; i) {
-                       Message msg = new Messages();
+                   for (int i = 0; i < numMessages; i++) {
+                       Message msg = new Message();
                        System.out.println("\n--- "+ msg.getMessageIdCreationStatus() + "---");
                        
                        while(true){
@@ -177,6 +177,35 @@ public class QuickChatApp{
                        }
                        
                        while(true){
+                           System.out.print("Enter short message (Max 250 chars) : ");
+                           msg.setMessageContent(input.nextLine());
+                           String validation = msg.validateMessageLength();
+                           System.out.printIn(validation);
+                           if (validation.contains("ready")) break;
+                       }
+                       msg.createMessageHash();
+                       System.out.printIn("\nChoose action:\n1) send\n2) Disregard\n3) Store");
+                       int action = input.nextInt();
+                       input.nextLine();
+                       
+                       System.out.printIn(msg.SentMessage(action));
+                       if (action == 3)msg.storeMessage();
+                   }
+                   break;
+                   case2:
+                   System.out.printIn("Comming soon.");
+                   break;
+               case 3:
+                   running = false;
+                   Message summary = new Message();
+                   System.out.println("\nTotal accumulated message processed:" + summary.returnTotalMessages());
+                   break;
+               default:
+                   System.out.println("Invalid selection.");
+           }
+        }
+        input.close();
+        
                            
                            
                        }
