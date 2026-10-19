@@ -85,7 +85,7 @@ public class testlogin {
     @Test
     public void testRegisterUsernameIncorrectMessage() {
         Login login = new Login();
-        String expectedMessage = "Username is not correctly formatted, please ensure that your username contains an underscore and is no more than five characters in length.";
+        String expectedMessage = "userName is not correctly formatted, please ensure that your username contains underscore and is no more than five characters in length";
         
         // Testing registration with incorrect username format
         String actualMessage = login.registerUser("kyle!!!!!!", "Ch&&sec@ke99!", "+27838968976", "John", "Doe");
@@ -104,7 +104,7 @@ public class testlogin {
     @Test
     public void testRegisterCellPhoneIncorrectMessage() {
         Login login = new Login();
-        String expectedMessage = "Cell number is incorrectly formatted or does not contain an international code, please correct the number and try again.";
+        String expectedMessage = "Cell phone number incorrectly formatted or does not contain international code, please correct the number and try again.";
         
         String actualMessage = login.registerUser("kyl_1", "Ch&&sec@ke99!", "08966553", "John", "Doe");
         assertEquals(expectedMessage, actualMessage);
@@ -114,7 +114,7 @@ public class testlogin {
     public void testReturnLoginStatusMessage() {
         Login login = new Login();
         // Testing greeting response message status
-        String expectedMessage = "WelcomefirstName,lastName it is geat to see you again";
+        String expectedMessage = "WelcomefirstName,lastName it is great to see you again";
         String actualMessage = login.returnLoginStatus(true);
         
         assertEquals(expectedMessage, actualMessage);
