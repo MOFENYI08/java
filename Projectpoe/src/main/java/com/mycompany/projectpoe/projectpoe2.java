@@ -90,7 +90,24 @@ public class projectpoe2 {
         return this.messageHash;
     }
     //sent message
+    public String sentMessage (int choice){
+        switch (choice){
+            case 1:
+                totalMessageCounter++;
+                allMessages.add(this);
+                return "Message successfully sent.";
+            case 2:
+                return "press 0 to delete the message";
+            case 3:
+                totalMessagesCounter++;
+                allMessages.add(this);
+                return "Message successfully stored";
+            default:
+                return "invalid option";
+        }
+    }
     
+    // print message
         }
     }
     
