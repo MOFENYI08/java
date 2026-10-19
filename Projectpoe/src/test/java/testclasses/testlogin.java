@@ -17,7 +17,7 @@ public class testlogin {
       }
 
     
-    // 1. ASSERTIONS FOR BOOLEAN METHODS (assertTrue / assertFalse)
+    // ASSERTIONS FOR BOOLEAN METHODS (assertTrue / assertFalse)
     
 
     @Test
@@ -76,7 +76,7 @@ public class testlogin {
     }
 
   
-    // 2. ASSERTIONS FOR STRING RESPONSES (assertEquals)
+    //  ASSERTIONS FOR STRING RESPONSES (assertEquals)
     
 
     @Test
@@ -118,3 +118,71 @@ public class testlogin {
     }
     
 }
+
+
+
+public class MessageTest {
+
+    //  Message length checks (Success & Failure)
+    @Test
+    public void testMessageLengthValidation() {
+        // Success scenario
+        Message validMsg = new Message();
+        validMsg.setMessageContent("Hello world, this is a short test message.");
+        assertEquals("Message ready to send.", validMsg.validateMessageLength());
+
+        // Failure scenario (Simulating text longer than 250 characters)
+        Message longMsg = new Message();
+        String overflowText = "A".repeat(255); // 255 characters long
+        longMsg.setMessageContent(overflowText);
+        assertEquals("Message exceeds 250 characters by 5; please reduce the size.", longMsg.validateMessageLength());
+    }
+
+    //  Recipient field constraints
+    @Test
+    public void testRecipientCellFormatting() {
+        // case success starts with '+' and within 10 characters limit
+        Message validCell = new Message();
+        validCell.setRecipient("+2782123");
+        assertEquals("Cell phone number successfully captured.", validCell.checkRecipientCell());
+
+        //  missing international code or too long
+        Message invalidCell = new Message();
+        invalidCell.setRecipient("082123456789");
+        assertEquals("Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again.", invalidCell.checkRecipientCell());
+    }
+
+    //  Proper hash generation formatting (Matches Test Case 1 specification)
+    @Test
+    public void testCreateMessageHash() {
+        // Supplying specific data to produce "00:0:HITONIGHT"
+        // Message ID starts with "00", Message Number is 0, first word "HI", last word "TONIGHT"
+        Message hashMsg = new Message("0012345678", 0, "+27123", "HI to everyone TONIGHT");
+        String producedHash = hashMsg.createMessageHash();
+        
+        assertEquals("00:0:HITONIGHT", producedHash);
+    }
+
+    //  Message ID limits and creation status output
+    @Test
+    public void testMessageIDTracking() {
+        Message msg = new Message();
+        // Check structural limits
+        assertTrue(msg.checkMessageID());
+        
+        // Verify output matches the status message syntax requested in image 6
+        String expectedPrefix = "Message ID generated: ";
+        assertTrue(msg.getMessageIdCreationStatus().startsWith(expectedPrefix));
+    }
+
+    //  Action routing conditions matching Image 6 statements
+    @Test
+    public void testSentMessageChoices() {
+        Message testMsg = new Message();
+        
+        assertEquals("Message successfully sent.", testMsg.SentMessage(1));
+        assertEquals("Press 0 to delete the message.", testMsg.SentMessage(2));
+        assertEquals("Message successfully stored.", testMsg.SentMessage(3));
+    }
+}
+
