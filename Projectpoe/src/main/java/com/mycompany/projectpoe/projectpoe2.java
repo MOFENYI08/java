@@ -39,7 +39,7 @@ public class projectpoe2 {
         this.messageContent = messageContent;
     }
     //method to generate a random 10 digit number as string
-    private String genetrateRandom10DigitID(){
+    private String generateRandom10DigitID(){
         Random rand = new Random();
         StringBuilder sb = new StringBuilder();
         for (int i=0; i< 10; i++){
