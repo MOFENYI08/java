@@ -109,7 +109,7 @@ public class projectpoe2 {
     
     // print message
     public String printMessage(){
-        String Builder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         
         }
     }
