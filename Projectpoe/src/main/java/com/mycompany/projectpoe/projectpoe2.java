@@ -100,7 +100,7 @@ public class projectpoe2 {
             case 2:
                 return "press 0 to delete the message";
             case 3:
-                totalMessagesCounter++;
+                totalMessageCounter++;
                 allMessages.add(this);
                 return "Message successfully stored";
             default:
