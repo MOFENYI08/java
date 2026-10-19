@@ -77,8 +77,8 @@ public class MessageTest {
         Message testMsg = new Message();
         
         assertEquals("Message successfully sent.", testMsg.sentMessage(1));
-        assertEquals("Press 0 to delete the message.", testMsg.sentMessage(2));
-        assertEquals("Message successfully stored.", testMsg.sentMessage(3));
+        assertEquals("press 0 to delete the message", testMsg.sentMessage(2));
+        assertEquals("Message successfully stored", testMsg.sentMessage(3));
     
 
     }
