@@ -70,7 +70,7 @@ public class projectpoe2 {
             return "Message ready to send.";
         }else{
             int exceededBy = this.messageContent.length() - 250;
-            return"Message exceede 250 characters by" + exceedBy + ", please reduce size";
+            return"Message exceede 250 characters by" + exceededBy + ", please reduce size";
         }
     }
     // message hash
