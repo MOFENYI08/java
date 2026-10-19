@@ -134,6 +134,13 @@ public class projectpoe2 {
     public void setMessageId (String messageId ){ this.messageID = messageId;}
     public int getMessageNumber(){return messageNumber; }
     public String getRecipient() {return recipient; }
+    public  void setRecipient (String recipient){this. recipient = recipient;}
+    public String getMessageContent() {return messageContent; }
+    public void setMessageCounter(String messageContent) {this.messageContent = messageContent;}
+    public String grtMessageHash(){return messageHash; }
+}
+
+//
     
     
         }
