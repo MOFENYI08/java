@@ -110,7 +110,11 @@ public class projectpoe2 {
     // print message
     public String printMessage(){
         StringBuilder sb = new StringBuilder();
-        
+        for (message msg: allMessages){
+            sb.append("Message ID:" ).append(msg.getMessageId()).append("\n")
+                    .append ("message Hash:").append(msg.getMessageHash()).append("\n")
+                    .append ("recipient:").append(msg.getRecipient()).append("\n")
+                    .append ("message :").append(msg.getMessageContent()).append("\n")
         }
     }
     
