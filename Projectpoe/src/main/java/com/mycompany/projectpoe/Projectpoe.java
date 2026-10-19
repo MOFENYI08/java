@@ -51,7 +51,7 @@ public class Projectpoe {
       System.out.print("Enter SouthAfrican cellnumber: ");
       cellnumber = inputs.nextLine();
       while (!login.checkCellPhoneNumber(cellnumber)){
-          System.out.println("Cell phone number incorrectly formatted or does not contain international code.");
+          System.out.println("Cell phone number incorrectly formatted or does not contain international code, please correct the number and try again.");
           System.out.print("Please enter valid cell phone number: ");
           cellnumber = inputs.nextLine();
       }
