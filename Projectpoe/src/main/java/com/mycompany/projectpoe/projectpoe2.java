@@ -165,7 +165,21 @@ public class QuickChatApp{
                    input.nextLine();
                    
                    for (int i = 0; i < numMessages; i) {
+                       Message msg = new Messages();
+                       System.out.println("\n--- "+ msg.getMessageIdCreationStatus() + "---");
                        
+                       while(true){
+                           System.out.print("Enter recipient cell:");
+                           msg.setRecipient(input.nextLine());
+                           String validation = msg.checkRecipientCell();
+                           System.out.println(validation );
+                           if (validation.contains("successfully")) break;
+                       }
+                       
+                       while(true){
+                           
+                           
+                       }
                    }
            }
     
