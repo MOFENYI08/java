@@ -73,6 +73,14 @@ public class Projectpoe {
       String finalStatusMessage = login.returnLoginStatus(isConnected);
       
       System.out.println("\n"+ finalStatusMessage);
+      
+      // launch the messaging application if login is successful
+      if(isConnected){
+          System.out.println("\n---Loading chat platform app interfaces---");
+          QuickChatApp.main(args);
+      }else{
+          System.out.println("Application closing due to failed authentication.");
+      
       inputs.close();
       
       }
