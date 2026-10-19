@@ -126,7 +126,11 @@ public class projectpoe2 {
     }
     // store message 
     public void storeMessage(){
-        System.out.println("{\"messageId\" : \"" + this.messageID + "\", \"Hash\" : \ "" + this.messageHash + "\"} successfully serialised to storage JSON.");
+        System.out.println("{\"messageId\" : \"" + this.messageID + "\", \"Hash\" : \"" + this.messageHash + "\"} successfully serialised to storage JSON.");
+    }
+    
+    // getters and setters
+    
         }
     }
     
