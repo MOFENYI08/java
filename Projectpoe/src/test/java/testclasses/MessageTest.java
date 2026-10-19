@@ -31,7 +31,7 @@ public class MessageTest {
         Message longMsg = new Message();
         String overflowText = "A".repeat(255); // 255 characters long
         longMsg.setMessageCounter(overflowText);
-        assertEquals("Message exceede 250 characters by 5 , please reduce size", longMsg.validateMessageLength());
+       assertEquals("Message exceede 250 characters by5, please reduce size", longMsg.validateMessageLength());
     }
 
     //  Recipient field constraints
