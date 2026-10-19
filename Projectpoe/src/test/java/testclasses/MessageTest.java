@@ -45,7 +45,7 @@ public class MessageTest {
         //  missing international code or too long
         Message invalidCell = new Message();
         invalidCell.setRecipient("082123456789");
-        assertEquals("cell phone number is incorrectly formatted or does not contain an international code, Please correct the number and try again.", invalidCell.checkRecipientCell());
+        assertEquals("cell phone is incorrectly formatted or does not contain and international code, please correct the number and try again.", invalidCell.checkRecipientCell());
     }
 
     //  Proper hash generation formatting (Matches Test Case 1 specification)
