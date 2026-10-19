@@ -130,6 +130,10 @@ public class projectpoe2 {
     }
     
     // getters and setters
+    public String getMessageId(){ return messageId;}
+    public void setMessageId (String messageId ){ this.messageID = messageId;}
+    public int getMessageNumber(){return messageNumber; }
+    public String getRecipient() {return messageNumber;}
     
         }
     }
