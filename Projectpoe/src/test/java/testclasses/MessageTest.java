@@ -12,8 +12,11 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author letha
  */
 public class MessageTest {
-    
+
+
     public MessageTest() {
+    
+    }
          //  Message length checks (Success & Failure)
     @Test
     public void testMessageLengthValidation() {
@@ -74,8 +77,8 @@ public class MessageTest {
         assertEquals("Message successfully sent.", testMsg.SentMessage(1));
         assertEquals("Press 0 to delete the message.", testMsg.SentMessage(2));
         assertEquals("Message successfully stored.", testMsg.SentMessage(3));
-    }
     
+
     }
     
 }
