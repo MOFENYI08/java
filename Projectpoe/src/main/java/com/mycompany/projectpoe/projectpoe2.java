@@ -73,6 +73,24 @@ public class projectpoe2 {
         }
     }
     // message hash
+    public String createMessageHash(){
+        if (this.messageID == null || this.messageContent ==null || this.messageContent.trim().isEmpty()){
+            return "message hash invalid";
+        }
+        //first two numbers of message Id
+        String idPrefix = this.messageID.substring(0, math.min(2, this.messageID.length()));
+        
+        //extract first and last words
+        String [] words = this.messageContent.trim().split("\\s+");
+        String firstWords = words [0];
+        String lastWord = words[words.length - 1];
+        
+        // Assemble and capitalize
+        this.messageHash = (idPrefix + ":" + this.messageNumber + ":" + firstWord + lastWord).toUpperCase();
+        return this.messageHash;
+    }
+    //sent message
+    
         }
     }
     
