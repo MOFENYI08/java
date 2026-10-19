@@ -10,6 +10,7 @@ import java.util.Scanner;
  *
  * @author letha
  */
+//the main drivers class
 public class QuickChatApp {
     public static void main (String[] args){
         Scanner input = new Scanner (System.in);
